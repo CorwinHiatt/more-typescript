@@ -1,23 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
+import Aboutme , {Person } from './components/Aboutme';
+import Greeter from './components/Greeter';
+import PhotoCard, {  PhotoCardType } from './components/PhotoCard';
+import Counter from './components/Counter';
 import './App.css';
+
+const me: Person = {
+name: "Corwin",
+age: 25,
+awesome: true,
+
+}
+
+
+
+const card: PhotoCardType = {
+  photo:'https://lh3.googleusercontent.com/ogw/AOh-ky34t5fd0w9ldRPKMVEIsV_xbcSYNHplZ9kVirThwQ=s32-c-mo',
+  user:'todd albert',
+  mainPhoto: '',
+  description: '',
+  likeCount: 99,
+
+}
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <h1>Hello typeScript</h1>
+      <Aboutme person ={me}/>
+      <Counter/>
+      <Greeter firstName='Corwin' lastName='Hiatt'/>
+      <PhotoCard card={card}/>
+     
       </header>
     </div>
   );
