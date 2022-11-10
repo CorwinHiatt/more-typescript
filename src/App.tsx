@@ -25,7 +25,9 @@ const card: PhotoCardType = {
 
 function App() {
   return (
+
     <div className="App">
+      <div className='main-box'>
       <header className="App-header">
       <h1>Hello typeScript</h1>
       <Aboutme person ={me}/>
@@ -34,6 +36,7 @@ function App() {
       <PhotoCard card={card}/>
      
       </header>
+      </div>
     </div>
   );
 }
